@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { GuxComponent } from './gux.component';
+import { AutoCompleteComponent } from './components/auto-complete/auto-complete.component';
+import { CommonModule } from '@angular/common';
 
 
 
 @NgModule({
   declarations: [
-    GuxComponent
+    GuxComponent,
+    AutoCompleteComponent
   ],
   imports: [
+    CommonModule
   ],
   exports: [
-    GuxComponent
+    GuxComponent,
+    AutoCompleteComponent
   ]
 })
 export class GuxModule { }

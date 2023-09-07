@@ -1,0 +1,19 @@
+<div class="relative">
+    <input
+        class="w-full h-12 outline-none border-b-2  p-2" 
+        type="text"
+        (focus)="mostrarDiv()"
+        (blur)="ocultarDiv()"
+        placeholder="escribir">
+        <ul
+        class="absolute w-full h-0 overflow-hidden transition-all duration-300 ease-in-out overflow-y-auto max-h-32 bg-white shadow-lg" 
+        [ngClass]="{ 'h-32 rounded-b-md': view }"
+        >
+            <li 
+                class="p-2 cursor-pointer w-full hover:bg-gray-200"
+                *ngFor="let row of list; let i = index"
+                (click)="selected(row)">
+                    {{row.text}}
+            </li>
+        </ul>
+</div>
